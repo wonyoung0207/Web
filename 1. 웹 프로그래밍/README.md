@@ -574,7 +574,7 @@ li : first-letter{ // 첫 글자를 red 로 변경
               alert('마우스 오버')
           }
           var p = document.getElementById("tagP");
-          p.onmouseover = over; // over() 라고 하면 안됨 ㄴ
+          p.onmouseover = over; // over() 라고 하면 안됨 
       </script>
       ```
 
@@ -613,5 +613,7 @@ li : first-letter{ // 첫 글자를 red 로 변경
 5. Onload
 
    - window 객체에 발생하여 웹 페이지 로딩이 완료되면 호출된다. 
+
+6. 
 
  
