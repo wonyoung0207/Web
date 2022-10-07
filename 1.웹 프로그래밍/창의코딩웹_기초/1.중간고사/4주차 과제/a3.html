@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html><head><title>날자 휴일 switch</title></head>
+<body>
+<script>
+
+var day;
+var a;
+
+
+day = prompt("요일을 입력하세요","금요일");
+
+
+	switch(day){
+	
+	case "월요일":
+	case "회요일":
+	case "수요일":
+	case "목요일":
+	case "금요일": a = "평일입니다.정상영업"; break;
+	default: a = "휴일입니다"; break;
+
+	}
+
+	document.write("학점은[" + a + "]입니다.");
+
+</script></body></html>

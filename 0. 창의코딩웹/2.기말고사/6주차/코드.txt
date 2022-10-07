@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html><head><title>...</title></head>
+<body>
+<script>
+
+var today = new Date();
+
+
+
+document.write("현재시간 : " + today.toLocaleString() + "<br>");
+document.write(today.toLocaleDateString() + "<br>");
+document.write(today.toLocaleTimeString() + "<br>");
+</script>
+</body></html>
+================================================
+<!DOCTYPE html>
+<html><head><title>...</title></head>
+<body>
+<script>
+
+var mystr = new String("자바스크립트");//한글은 2바이트짜리임
+var yourstr = new String("javascript");//글자는 거의 1바이트임 
+
+document.write("mystr 의 내용 " + mystr  + "<br>");//6나옴
+document.write("mystr 의 길이 " + mystr.length  + "<br>");
+
+document.write("yourstr 의 내용 " + yourstr  + "<br>");//10나옴
+document.write("yourstr 의 길이 " + yourstr.length  + "<br>");
+
+
+</script>
+</body></html>
+
+=================================================
+
+<!DOCTYPE html>
+<html><head><title>...</title></head>
+<body>
+<script>
+//일주일동안의 온도 변화를 기록하여 평균 온도를 측정하려고 합니다. 
+//키보드로 온도를 입력받아 처리하세요.(배열 적용)
+//5점기준으로 도형 추가
+<!DOCTYPE html>
+<html><head><title>...</title></head>
+<body>
+<script>
+
+var arr = new Array();
+var sqr = new Array();
+var sum = 0;
+var avg = 0;
+
+for(var i = 0; i < 7; i++){
+	arr[i] = parseInt(prompt("온도를 입력하세요"));
+	sum = sum + arr[i];
+}
+
+avg = sum / 7;
+
+for(var  j = 0; j < arr.length;j++){
+	
+}
+
+document.write("7일동안의  온도 평균 : " + avg + "입니다.");
+
+
+</script>
+</body></html>
+
+====================================================
+<!DOCTYPE html>
+<html><head><title>...</title></head>
+<body>
+<script>
+
+var arr = new Array();
+var sqr = new Array();
+var sum = 0;
+var avg = 0;
+var num = 0;
+
+
+for(var i = 0; i < 7; i++){
+	arr[i] = parseInt(prompt("온도를 입력하세요"));
+	sum = sum + arr[i];
+}
+
+avg = sum / 7;
+
+for(var  j = 0; j < 7;j++){
+	num = arr[j] / 5;
+	for(var k = 1; k <= num; k++){
+		sqr[j] = sqr[j] +" ■ ";
+		
+	}
+	
+	num = 0;
+}
+
+
+document.write("7일동안의  온도 평균 : " + avg + "입니다."+"<br>");
+document.write("입력된 온도 : ["+ arr+ " ]" +"<br>");
+
+for(var a = 0; a < arr.length; a++){
+
+	document.write("[" + a + "] "+ sqr[a] + "<br>");
+}
+
+</script>
+</body></html>

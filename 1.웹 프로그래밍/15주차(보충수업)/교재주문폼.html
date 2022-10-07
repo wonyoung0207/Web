@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head> <title> 교재주문폼 </title>
+<style>
+h3{
+	color:red;
+	text-align:center;
+}
+
+table{
+	border-collapse : collapse;//이중테두리 제거 
+	width:100%;
+}
+
+thead{
+	background-color:green;
+	color:white;
+}
+
+td,#name{
+	width:200px;
+	text-align:center;
+}
+
+
+#price{
+	text-align:right;
+	width:100px;
+}
+
+input{
+	width:150px;
+}
+
+input[type=text]{
+	width:100px;
+}
+
+a{
+	text-decoration:none;
+	color:blue;
+}
+
+</style>
+</head>
+<body>
+<h3> 교재주문 </h3>
+
+<table border=1>
+<thead>
+	<tr><th>전공서적</th><th>가격</th><th>수량</th><th>합계</th></tr>
+</thead>
+<tbody>
+	<tr><td id="name">자바프로그래밍</td><td id="price">34,000원</td><td><input type="number" min="0" value="0"></td><td><input type="text" value="0"></td></tr>
+	<tr><td id="name">파이썬</td><td id="price">9,500원</td><td><input type="number" min="0" value="0"></td><td><input type="text" value="0"></td></tr>
+	<tr><td id="name">이산수학</td><td id="price">12,000원</td><td><input type="number" min="0" value="0"></td><td><input type="text" value="0"></td></tr>
+	<tr><td id="name">웹프로그래밍</td><td id="price">50,000원</td><td><input type="number" min="0" value="0"></td><td><input type="text" value="0"></td></tr>
+</tbody>
+</table>
+<br>
+
+<button> 계산 </button>
+<button> 구매 </button>
+<button> 초기화 </button>
+<br>
+<br>
+<a href=""> 메인페이지로 이동 </a>
+
+
+</body>
+</html>

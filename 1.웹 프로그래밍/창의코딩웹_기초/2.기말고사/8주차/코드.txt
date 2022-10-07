@@ -1,0 +1,168 @@
+<!DOCTYPE html><html><head><title>...</title></head>
+<body><script>
+
+var num1 = parseInt(prompt("첫번째 점수를 입력",0));
+var num2 = parseInt(prompt("두번째 점수를 입력",0));
+
+document.write("첫번째 수 : "+num1+"<br>"+"두번째 수 : "+num2);
+
+
+
+
+</script>
+</body>
+</html>
+================================================
+<!DOCTYPE html><html><head><title>...</title></head>
+<body><script>
+
+function eSum(num1,num2){
+	sum = num1 + num2;
+	return num1+num2;
+}
+
+function eAvg(num1,num2){
+	avg = (num1+num2)/2;
+	return avg
+	
+}
+
+var num1 = parseInt(prompt("첫번째 점수를 입력",0));
+var num2 = parseInt(prompt("두번째 점수를 입력",0));
+var avg = 0;
+var sum = 0;
+
+
+
+document.write("두수의 합 sum : " + eSum(num1,num2)+"<br>");
+document.write("두 수의 평균 avg : " + eAvg(num1,num2)+"<br>");
+document.write("첫번째 수 : "+num1+"<br>"+"두번째 수 : "+num2);
+
+
+</script>
+</body>
+</html>
+
+=============================================
+//그룹화  = 객체화 시킬거임 ,클래스 구성요소 (생성자 맴머매소드 맴버변수),
+//new 뒤에 쓰는건 클래스임,생성자는 초기화를 해야하기 떄문에 만들어짐,
+//함수와 맴버 매소드 차이점 : 함수는 독립 매소드는 클래스에 소속
+<!DOCTYPE html><html><head><title>...</title></head>
+<body><script>
+
+function eSum(num1,num2){
+	sum = num1 + num2;
+	return sum;
+}
+
+function eAvg(num1,num2){
+	avg = (num1+num2)/2;
+	return avg;
+	
+}
+function Student(num1,num2){//매개변수,인자값 넘겨준 num1과num2와 다르다.
+	this.num1 = num1;//맴버변수->클래스 내에서만 사용하겠다.
+	this.num2 = num2;
+	this.getsum = eSum;
+	this.getavg = eAvg;
+	// eSum함수를 getSum 이라는 매소드로 변환시킬것임
+}
+
+
+var num1 = parseInt(prompt("첫번째 점수를 입력",0));//전역변수
+var num2 = parseInt(prompt("두번째 점수를 입력",0));
+var avg = 0;
+var sum = 0;
+
+var k = new Studnet(num1,num2);
+
+sum = k.getsum(num1,num2);
+avg = k.getavg(num1,num2);
+
+document.write("두수의 합 sum : " +sum+"<br>");
+document.write("두 수의 평균 avg : " + avg+"<br>");
+document.write("첫번째 수 : "+num1+"<br>"+"두번째 수 : "+num2);
+
+
+</script>
+</body>
+</html>
+===========================================
+//그룹화  = 객체화 시킬거임 ,클래스 구성요소 (생성자 맴머매소드 맴버변수),
+//new 뒤에 쓰는건 클래스임,생성자는 초기화를 해야하기 떄문에 만들어짐,
+//함수와 맴버 매소드 차이점 : 함수는 독립 매소드는 클래스에 소속
+<!DOCTYPE html><html><head><title>...</title></head>
+<body><script>
+
+function eSum(num1,num2){
+
+	return (num1 + num2);
+}
+
+function eAvg(sum){
+
+
+	return (sum/2);
+	
+}
+
+function eGrade(avg){
+	
+	if(avg >=90 && avg <=100)
+		grade = "A";
+
+	else if(avg >=80 && avg <90)
+		grade = "B";
+
+	else if(avg >=70 && avg <80)
+		grade = "C";
+
+	else if(avg >=60 && avg <70)
+		grade = "D";
+
+	else
+		grade = "F";
+
+	
+	return grade;
+
+}
+
+
+function Student(name){//매개변수,인자값 넘겨준 num1과num2와 다르다.
+	
+	this.getsum = eSum;//맴버변수->클래스 내에서만 사용하겠다.
+	this.getavg = eAvg;
+	this.getgrade = eGrade;
+	this.getname = name;
+
+	// eSum함수를 getSum 이라는 매소드로 변환시킬것임
+}
+
+
+var num1 = parseInt(prompt("첫번째 점수를 입력",0));//전역변수
+var num2 = parseInt(prompt("두번째 점수를 입력",0));
+
+var avg = 0;
+var sum = 0;
+var grade;
+var name = "홍길동";
+
+var k = new Student("홍길동");
+
+sum = k.getsum(num1,num2);
+avg = k.getavg(sum);
+grade = k.getgrade(avg);
+
+
+document.write(name +"의 성적은"+"<br>");
+document.write("합 : " + sum+"<br>");
+document.write("평균 : " + avg+"<br>");
+document.write("학점 : " + grade+"<br>");
+
+
+</script>
+</body>
+</html>
+=============================================
+

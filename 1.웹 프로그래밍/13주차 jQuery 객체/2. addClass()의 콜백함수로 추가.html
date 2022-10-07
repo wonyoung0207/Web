@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<script src="C:\Users\안원영\Desktop\Wy\2. 웹프로그래밍_김은주/jquery-3.5.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('h1').addClass(function (index){//같은 태그 사용시 자동으로 인덱스 설정됨
+			return 'class' + index;
+		});
+	});
+</script>
+</head>
+
+<body>
+<h3> 브라우져 속성편집으로 보기  </h3>
+<h3> Class이름 추가 </h3>
+<hr>
+
+<h1> Header-0 </h1>
+<h1> Header-1 </h1>
+<h1> Header-2 </h1>
+
+</body>
+</html>

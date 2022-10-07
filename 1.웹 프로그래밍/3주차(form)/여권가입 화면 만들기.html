@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head><title>회원가입화면 만들기-실습5</title></head>
+<body>
+<header><h2>여권신청하기<h2></header>
+<hr>
+<section>
+<form>
+
+<img src="증명사진.jpg" width="150" height="200">
+
+<article>
+<h4>어떤여권을 원하나요?</h4>
+<ol type="1">
+<li>접수 일자 : <input type="date">
+<li>여권기간 : 
+10년<input type="checkbox" value="1">
+5년<input type="checkbox" value="2">
+5년미만<input type="checkbox" value="3">
+단수(1년)<input type="checkbox" value="4">
+<li>여권종류 : 
+일반<input type="checkbox" value="5">
+거주<input type="checkbox" value="6">
+관용<input type="checkbox" value="7">
+외교관<input type="checkbox" value="8">
+여행증명서(왕복:<input type="checkbox" value="9"> 편도:<input type="checkbox" value="10">)
+<li>여권면수 : 
+24<input type="checkbox" value="11">
+48<input type="checkbox" value="12">
+</ol>
+</article>
+
+<hr>
+
+
+<article>
+<h4>개인정보를 재공해 주세요</h4>
+<h6><mark>(**필수기입공간**)</mark></h6>
+
+<ol type="A">
+<li>성명 : 
+<ul>
+<li><label for="myname">한글 : </label><input type="text" value="" minlength="3" placeholder="최소3자이상" id="myname">
+<li>영문<mark>(대문자로 표기)</mark> : 
+성(Last name)<input type="text" value="" placeholder="AHN"> ,
+이름(First name)<input type="text" value="" placeholder="WONYOUNG">
+</ul>
+<li>주민등록번호 : <input type = "text" placeholder="총 13자리 입력" maxlength="14">
+
+<li>직업 : 
+<input type="text" list="job">
+<ul>
+<li>학교선택: <input type="text" list="school">
+
+<li>학년: 
+1학년<input type="checkbox" value="13">
+2학년<input type="checkbox" value="14">
+3학년<input type="checkbox" value="15">
+4학년<input type="checkbox" value="16">
+
+<li>학과선택: <input type="text" list="전공">
+</datelist>
+<datalist id = "school">
+<option value="한림대학교">
+<option value="서울대학교">
+<option value="성균관대학교">
+<option value="기타">
+</datalist>
+</datelist>
+<datalist id = "전공">
+<option value="빅데이터">
+<option value="iot">
+<option value="AI">
+<option value="기타">
+</datalist>
+</ul>
+<datalist id = "job">
+<option value="학생">
+<option value="회사원">
+<option value="CEO">
+<option value="기타">
+</datalist>
+
+<li>질병여부 :
+유<input type="checkbox" value="17">
+무<input type="checkbox" value="18">
+<ul>
+<li>"유" 체크시 작성 -> 병명을 입력하세요: <input type="text" value="" placeholder="허리디스크">
+</ul>
+<li>병역여부 : 
+<ol>
+만기전역<input type="checkbox" value="19">
+<ul>
+<li>지역: <input type="text" value="" placeholder="화천">
+<li>부대소속: <input type="text" value="" placeholder="3연대">
+</ul>
+불명예전역<input type="checkbox" value="20">
+<ul>
+<li>사유: <input type="text" value="" placeholder="부상">
+</ul>
+</ol>
+<li>주소 : <input type="text" value="" placeholder="00시 00동 000-000번지"><input type="button" value="찾기">
+<li>번호 : 
+<ul>
+<li>집: <input type="text" value="" placeholder="033-000-0000">
+<li>핸드폰: <input type="text" value="" placeholder="010-0000-0000">
+</ul>
+<li>긴급연락처: 
+<ul>
+<li>성명: <input type="text" value="" placeholder="홍길동">
+<li>관계: <input type="text" value="" placeholder="부">
+<li>전화번호: <input type="text" value="" placeholder="010-0000-0000">
+<li>주소: <input type="text" value="" placeholder="00시 00동 000-000번지">
+</ul>
+<li>국적: <input type="text" list="country">
+<datalist id = "country">
+<option value="한국">
+<option value="일본">
+<option value="중국">
+<option value="기타">
+</datalist>
+
+</ol>
+</article>
+<hr>
+
+
+<article>
+<h4>선택기재 사항</h4>
+<details>
+<summary>만 18세 미만일 경우 기재</summary>
+<dl>
+<dt>법정대리인
+<dd>
+<ul>
+<li>성명: <input type="text" value="" maxlength="3" placeholder="홍길동">
+<li>주민등록번호: <input type="text" value="" maxlength="3" placeholder="123456-1234567">
+</ul>
+</dl>
+</details>
+
+<details>
+<summary>해외거주 중일 경우 기재</summary>
+<dl>
+<dt>영주권
+<dd>
+<ul>
+<li>번호: <input type="text" value="" placeholder="123-412">
+<li>취득일: <input type="date">
+</ul>
+<dt>거주국
+<dd>
+<ul>
+<li>입국일: <input type="date">
+<li>거주나라: <input type="text" list="country">
+</ul>
+</dl>
+</details>
+
+<details>
+<summary>특이사항</summary>
+<table border="1">
+<thead><tr><th>취미</th><th>특기</th><th>관심분야</th></tr></thead>
+<tbody><tr><td>영화보기</td><td>축구</td><td>컴퓨터</td></tbody>
+</table>
+</details>
+
+
+</article>
+<hr>
+
+
+</section>
+<footer>
+<h3>동의구분</h3>
+여권법 시행 규칙에 대해 동의합니까?
+네<input type="checkbox" value="21">
+아니오<input type="checkbox" value="22"><br>
+
+<pre>
+위의 기재한 내용은 사실과 다름이 없으며, [여권법] 에 따라 여권을 신청합니다.
+
+						연,월,일<input type="date">
+						신청인  <input type="text" value="">
+						날인    <textarea cols="20" rows="10"></textarea>
+</pre>
+</footer>
+
+
+</form>
+</body>
+</html>

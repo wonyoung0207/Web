@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+*{
+	margin:0;
+	padding:0;
+}
+#container{
+	margin-top:50px;
+	margin-left:200px;
+	margin-right:100px;
+}
+/* #top_bar{
+	background: aliceblue;
+	position:fixed;
+	text-align : right;
+	left:0;top:0;right:0;이렇게해야 top 에 붙어있는 div가 상단과 양 옆의 크기가 달라져도 늘어남, bottom 부분은 container이 움직이기때문에 상관 없음 
+	height:30px;
+}
+ */
+
+ 
+#left_bar{
+	/* background:aliceblue; */
+	position:fixed;
+	left:0;top:0;bottom:0;/* 이렇게해야 top 에 붙어있는 div가 상단과 양 옆의 크기가 달라져도 늘어남, bottom 부분은 container이 움직이기때문에 상관 없음  */
+	height:500px;
+	margin-top:50px;
+	font-color:black;
+	font-size:15px;
+}
+
+#left_bar div{
+	border : 1px solid black;
+	margin : 10px;
+	padding :5px;	
+	width : 150px;
+	color : black;
+	text-align : center;
+}
+
+#user:hover{
+	background-color:yellow;
+	
+	transition:background-color 3s, transform 2s;
+}
+
+#left_bar_home:hover{
+	margin-left:50px;
+	border : 1px solid olive;
+	background-color:olive;
+	transition:background-color 3s, transform 1s;
+}
+
+table{
+border-collapse : collapse;
+}
+
+tr#머리{
+text-align : center;
+font-size:30px;
+padding : 5px;
+height : 15px;
+width : 110px;
+background : olive;
+font-family : "Papyrus";
+}
+
+td{
+text-align : center;
+padding : 5px;
+height : 15px;
+
+}
+
+thead,tfoot{
+background : darkgray;
+color : yellow;
+}
+
+tbody tr:nth-child(even){
+background : aliceblue;
+}
+
+tbody td:hover{
+background : pink;
+border-radius:40px;
+
+}
+
+#이미지{
+width:300px;
+height:250px;
+border-radius: 70px;
+}
+
+a{
+	text-decoration:none;
+}
+
+problem_div{
+	
+	text-align:center;
+}
+
+

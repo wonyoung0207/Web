@@ -1,0 +1,230 @@
+window ->BOM객체, 즉 브라우저 관련 객체 종류를 안다. -> 사용가능한 브라우져가 따로 있다.
+
+<iframe>를 이용해 window객체 생성할수 있음
+
+window.open()의 ()에 매개변수 3개 넣을수 있는데 좋류는 ->오버로딩기능으로 되어있음_>매개변수 입력
+안되면 그상태로 그냥 실행됨
+1.웹페이지 주소,2.윈도우의 이름,3.윈도우 모양&크기 등의 속성
+===============================================
+//window는 인터넷 설정에따라 결과값이 안나올수도 있다. 별로안중요?
+<!DOCTYPE html>
+<html><head><title>...</title></head>
+<body>
+<script>
+
+window.open("sample.html");
+
+
+</script>
+</body></html>
+========================================
+
+<!DOCTYPE html>
+<html><head><title>...</title></head>
+<body>
+<script>
+
+//window.open("sample.html");//sample.html에 있는 실행문을 실행시켜 새 윈도우 창에 띄운다. 내가 띄운창 다음창에 나타남
+//window.open("sample.html","myWin","toolbar=yes");//myWin의 이름을 가진 새 윈도우 열고  toolbar만 표시
+//window.open("sample.html","_self");//현제 윈도우에  html파일 띄우기
+window.open("sample.html","_blank");//새 윈도우에 출력
+//window.open("http://www.naver.com","myWin","left=10,top=10,width=300,height=400");
+//window.open("http://www.naver.com",);
+//window.open();
+
+
+
+</script>
+</body></html>
+=========================================================
+<!DOCTYPE html>
+<html>
+<head><title>history 객체 활용</title></head>
+<body>
+<script>
+//location 은 내가 원하는 사이트로 이동해라 라는것임
+//window.location.assign("http://www.hallym.ac.kr");
+//window.location.replace("http://www.naver.com");
+
+var win = window.open();//빈 윈도우 열기->새 윈도우 창에 네이버 띄움
+win.location="http://www.naver.com";//네이버 페이지 로드
+
+
+
+</script>
+</body>
+</html>
+
+============================================================
+
+<!DOCTYPE html>
+<html><head><title>...</title></head>
+<body>
+<form>
+<button onclick="window.open('http://www.naver.com',",'width=600,height=600')">새 윈도우 열기
+
+</button>
+</form>
+</body></html>
+
+=======================================================
+<!DOCTYPE html>
+<html>
+<head>
+<title>윈도우 열기</title>
+<script>
+
+function load(URL) {
+	window.open(URL, "myWin", "left=300,top=300,width=400,height=300");
+}//left 는 왼쪽 , top은 위에, width와 height는 윈도우창 크기
+</script>
+</head>
+<body>
+<h3>window.open()으로 윈도우 열기</h3>
+<hr>//선긋기
+<a href="javascript:load('http://www.graceland.com')">
+         엘비스 프레슬리 홈 페이지</a><br>
+<a href="javascript:load('http://www.universalorlando.com')">
+         유니버설 올랜드 홈 페이지</a><br>
+<a href="javascript:load('http://www.disneyworld.com')">
+         디즈니월드 홈 페이지</a><br>         
+<a href="javascript:load('http://www.naver.com')">
+         네이버 홈페이지</a><br>     
+<a href="javascript:load('http://www.hallym.ac.kr')">
+         한림대학교 홈페이지</a><br>     
+
+</body>
+</html>
+==================================================
+<!DOCTYPE html>
+<html>
+<head><title>윈도우의 위치와 크기 조절</title></head>
+<body>
+<h3>윈도우의 위치와 크기 조절</h3>
+<hr>
+
+<button onclick="window.moveBy(-10, 0)">left</button>//x축y축으로 나뉘어서 움직임
+<button onclick="window.moveBy(10, 0)">right</button>//현제 위치를 기준으로 하기 때문에 위로 가려면 - 되야하고 밑으로 가려면 + 되야한다.
+<button onclick="self.moveBy(0, -10)">up</button>//위로 올라감
+<button onclick="moveBy(0, 10)">down</button>//
+<button onclick="resizeBy(10, 10)">+</button>
+<button onclick="resizeBy(-10, -10)">-</button>
+
+</body>
+</html>
+===========================================================
+//윈도우바가 자동으로 밑으로 조금씩 내려줌.창 작게해서 봐야 보임
+<!DOCTYPE html>
+<html>
+<head>
+<title>웹 페이지의 자동 스크롤</title>
+<script>
+function startScroll(interval) {
+	setInterval("autoScroll()", interval);
+}
+
+function autoScroll() {
+	window.scrollBy(0,10); // 10픽셀 위로 이동
+}
+</script>
+</head>
+<body onload="startScroll(1000)">
+<h3>자동 스크롤 페이지</h3>
+<hr>
+<h3>꿈길(이동순)</h3>
+꿈길에<br>
+발자취가 있다면<br>
+님의 집 창밖<br>
+그 돌계단 길이 이미 오래 전에<br>
+모래가 되고 말았을 거예요<br><br>
+하지만<br>
+그 꿈길에서 자취 없다 하니<br>
+나는 그것이 정말 서러워요<br><br>
+이 밤도<br>
+나는 님의 집 창밖<br>
+그 돌계단 위에 홀로 서서<br>
+혹시라도 님의 목소리가 들려올까<br>
+고개 숙이고 엿들어요<br>
+</body>
+</html>
+
+=========================================================
+//무슨기능 있는지만 보기,그냥 브라우저 정보 보여주는것임.별로 안중요?
+<!DOCTYPE html>
+<html>
+<head><title>브라우저 정보 출력</title>
+<script>
+function printNavigator() {
+	var text = "<span>appCodeName</span>: " + navigator.appCodeName + "<br>";
+		text += "<span>appName</span>: " + navigator.appName + "<br>";
+		text += "<span>appVersion</span>: " + navigator.appVersion + "<br>";
+		text += "<span>platform</span>: " + navigator.platform + "<br>";
+		text += "<span>product</span>: " + navigator.product + "<br>";
+		text += "<span>userAgent</span>: " + navigator.userAgent +"<br>";
+		text += "<span>vendor</span>: " + navigator.vendor +"<br>";
+		text += "<span>language</span>: " + navigator.language + "<br>";
+		text += "<span>onLine</span>: " + navigator.onLine + "<br>";
+		text += "<span>cookieEnabled</span>: " + navigator.cookieEnabled + "<br>";
+		text += "<span>javaEnabled()</span>:" + navigator.javaEnabled() + "<br>";
+		text += "<span>plugins.length</span>: " + navigator.plugins.length + "<br>";
+		for(j=0; j<navigator.plugins.length; j++) {
+			text += "plugins" + j + " : <blockquote>";
+			text += navigator.plugins[j].name + "<br>";
+			text += "<i>" + navigator.plugins[j].description + "</i><br>";
+			text += navigator.plugins[j].filename + "</blockquote>";
+		}
+
+	// div 태그에 출력
+	var div = document.getElementById("div");
+	div.innerHTML = text;
+}
+</script>
+</head>
+<body onload="printNavigator()">
+<h3>브라우저에 관한 정보 출력</h3>
+아래에 이 브라우저에 관한 여러 정보를 출력합니다.
+<hr>
+<p>
+<div id="div"></div>
+</body>
+</html>
+========================================================
+//별로 안중요?
+<!DOCTYPE html>
+<html>
+<head>
+<title>스크린 장치에 관한 정보 출력</title>
+<script>
+function printScreen() {
+	var text = "availHeight:".fontcolor('blue') + screen.availHeight + "<br>";
+		text += "availWidth:".fontcolor('blue') + screen.availWidth + "<br>";
+		text += "colorDepth:".fontcolor('blue') + screen.colorDepth + "<br>";
+		text += "pixelDepth:".fontcolor('blue')+ screen.pixelDepth + "<br>";
+		text += "height:".fontcolor('blue') + screen.height + "<br>";
+		text += "width:".fontcolor('blue') + screen.width + "<br>";
+
+	document.getElementById("div").innerHTML = text;
+}
+</script>
+</head>
+<body onload="printScreen()">
+<h3>스크린 장치에 관한 정보</h3>
+<hr>
+<div id="div"></div>
+</body>
+</html>
+=============================================================
+//별로 안중요?
+
+<!DOCTYPE html>
+<html>
+<head><title>history 객체 활용</title></head>
+<body>
+<h3>history 객체 활용</h3>
+<hr>
+<button onclick="history.back()">back()</button>//전페이지 갈때
+<button onclick="history.forward()">forward()</button>//앞에 페이지 갈때
+<button onclick="history.go(-1)">go(-1)</button>//
+</body>
+</html>
+====================================================

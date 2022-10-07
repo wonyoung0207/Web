@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<script src="C:\Users\안원영\Desktop\Wy\2. 웹프로그래밍_김은주/jquery-3.5.1.min.js"></script>
+
+<script>
+
+	$(document).ready(function (){
+		$('img').css('width',100).css('height',150);
+		
+
+		setInterval(function (){
+			$('img').first().appendTo('body');
+		},2000);
+	});
+
+</script>
+
+</head>
+<body>
+<h3> setInterval() 이용해서 초단위로 이동하기   </h3>
+<hr>
+
+<img src="강아지1.jpg"/>
+<img src="강아지2.jpg"/>
+<img src="노을.jpg"/>
+<img src="강아지1.jpg"/>
+<img src="강아지2.jpg"/>
+<img src="노을.jpg"/>
+
+
+</body>
+</html>

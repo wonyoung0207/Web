@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html><head><title>입출력 형식</title><head><body><script>
+
+var coffe;
+var num;
+var price;
+
+num = prompt("무슨커피를 드릴까요?\n --메뉴선택-- \n 1.에스프레소 \n 2.카푸치노 \n 3.카페라떼 \n 4.옛날커피 \n 5.취소",0000);
+num = parseInt(num);
+price = parseInt(price);
+	
+	if (num < 5){
+	switch(num){
+		case 1: coffe = "에스프레소"; price = 2500; break;
+		case 2: coffe = "카푸치노"; price = 3000; break;
+		case 3: coffe = "카페라떼"; price = 3500; break;
+		case 4: coffe = "옛날커피"; price = 1500; break;
+	}
+	document.write("주문하신 [" + coffe + "] 는 " + price + "입니다.");
+	}
+	else
+	document.write("주문을 취소하셨습니다.");
+	
+
+	
+</script></body></html>

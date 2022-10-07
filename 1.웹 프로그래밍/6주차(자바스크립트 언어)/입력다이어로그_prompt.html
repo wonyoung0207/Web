@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head><title>자바스크립트 다이얼로그-prompt</title></head>
+<body>
+<h3>입력 다이어로그- prompt("메시지","디폴트 입력값")</h3>
+<script>
+var r = prompt("이름을 입력하세요.","홍길동")
+if(r == null){
+document.write("취소눌렀을 경우")
+}
+else if(r == ""){
+document.write("입력하지 않고 확인 눌렀을 경우")
+}
+else{
+document.write(r)
+}
+</script>
+</body>
+</html>

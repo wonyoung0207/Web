@@ -1,0 +1,21 @@
+<!doctype html>
+<html><head><title>전역변수와 지역변수</title>
+</head>
+<body>
+<h3>지역변수와 전역변수 </h3>
+<hr>
+<script>
+var x = 100;//전역변수
+
+function f(){
+	var x=2;//지역변수
+	document.write("지역변수 = " + x);
+	document.write("<br>");
+	document.write("전역변수 = " + this.x);
+}
+
+
+f()//함수호출
+</script>
+</body>
+</html>

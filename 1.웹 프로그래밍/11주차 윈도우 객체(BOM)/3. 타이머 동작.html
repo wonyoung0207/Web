@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<title> 타이머 동작 </title>
+<script>
+var timerID = null;
+
+function startTimer(time){//마우스 올리면 타이머 시작
+	timerID = setTimeout("load('http://www.naver.com')",time);
+	
+	document.getElemetById("img").title="타이머 작동 시작...";//이미지에 마우스 올리면 툴팁메시지 동작
+
+
+}
+
+function cancleTimer(){
+	if(timerID != null){
+		clearTimeout(timerID);//타이머 작동을 중지시킴
+	}
+}
+
+function load(URL){
+	window.location=URL;//현재 윈도우에 사이트 로드
+}
+
+</script>
+</head>
+<body>
+<h3> 이미지에 마우스를 올리고 5초간 그대로 있을 때 사이트로 이동합니다.</h3>
+<hr>
+<img id="img" src="강아지1.jpg" onmouseover="startTimer(5000)" onmouseout="cancleTimer()">
+
+
+
+</body>
+</html>

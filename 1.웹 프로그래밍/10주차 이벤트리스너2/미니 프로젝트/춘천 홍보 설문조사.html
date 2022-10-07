@@ -1,0 +1,299 @@
+<!doctype html>
+<html>
+<head><title> 춘천 홍보 설문조사 </title>
+<style>
+fieldset{
+
+	display:inline-block;
+}
+
+#span_person{
+	font-size:20px;
+	background-color : yellow;
+}
+
+
+#q_title{
+	font-size:20px;
+	background-color : mistyrose;
+}
+</style>
+<script>
+
+//각 질문들의 value값이 저장되는 배열
+var q1 = new Array();
+var q2 = new Array();
+var q3 = new Array();
+var q4 = new Array();
+var q5 = new Array();
+var q6 = new Array();
+//
+
+
+var q_text = ["1년이하","1년~2년","2년~5년","5년 이상","학생","직장인","CEO","무직","관광명소","먹거리","특산물","문화,예술 체험","교통편리","자연친화","먹거리","관광지","소양강","하중도 생태공원","풍물시장","기타","19세 미만","19~39세","40~59세","60세이상"];//질문의 선택지를 저장하는 배열
+var q_score = new Array();
+var q_result = new Array();
+var cnt = 1;
+var num_min = 0;
+var num_max = 0;
+var person = 0;//제출버튼 누룰때마다 1씩 증가
+var num_text = 0;
+
+
+function main(){
+	var q = new Array();
+	
+	var result = document.getElementById("result");
+
+	q[0] = document.forms[0].one.value;//첫번째 질문의 value
+	q[1] = document.forms[1].two.value;//두번째 질문의 value
+	q[2] = document.forms[2].three.value;
+	q[3] = document.forms[3].four.value;
+	q[4] = document.forms[4].five.value;
+	q[5] = document.forms[5].six.value;
+
+	q1.push(q[0]);
+	q2.push(q[1]);
+	q3.push(q[2]);
+	q4.push(q[3]);
+	q5.push(q[4]);
+	q6.push(q[5]);
+
+	alert("제출완료");
+
+	person++;
+
+
+
+}
+
+function finish(){
+	var text;//text 내용 가져오는 변수
+	var person_num = document.getElementById("span_person");
+
+
+	q_one = calc(q1);
+	q_one = change(q_one);
+	text = rank_text(q_one);
+	
+	q_two = calc(q2);
+	q_two = change(q_two);
+	text = rank_text(q_two);
+
+	q_three = calc(q3);
+	q_three = change(q_three);
+	text = rank_text(q_three);
+
+	q_four = calc(q4);
+	q_four = change(q_four);
+	text = rank_text(q_four);
+
+	q_five = calc(q5);
+	q_five = change(q_five);
+	text = rank_text(q_five);
+
+	q_six = calc(q6);
+	q_six = change(q_six);
+	text = rank_text(q_six);
+
+
+
+	person_num.innerHTML = person + "명";
+	
+	
+}
+
+function rank_text(q){//순위로 텍스트 가져오는 함수
+	
+	var rank = new Array();
+	var q_value = new Array();//value값만 순위순으로 가진 배열
+	
+	for(var i=0; i<q.length;i++){//정렬된 value값 가져오기
+		q_value[i] = q[i][1];
+
+	}
+	
+	print_result(q_value,q_text,q);//text 출력하는 부분
+
+	
+
+}
+
+
+function print_result(q_value,q_text,q){
+	var rank_num=1;//순위표시하는 변수
+	var span_q_result = document.getElementById("span_result");
+
+
+	for(var i = 0; i<4; i++){//점수만큼 네모표시
+		var squar="";
+		for(var b=0; b < parseInt(q[i][0]); b++){
+				squar += "■";
+		}
+		q_score.push(" (" + q[i][0] + "점) " + squar);
+	}
+
+	for(var j=0; j<4;j++){//value값을 텍스트로 변환하여 배열에 저장
+		if(q_value[j] == "1")
+			q_result.push(q_text[num_text]);
+		else if(q_value[j] == "2")
+			q_result.push(q_text[num_text+1]);
+		else if(q_value[j] == "3")
+			q_result.push(q_text[num_text+2]);
+		else
+			q_result.push(q_text[num_text+3]);
+		num_max++;
+
+	}
+
+
+	span_q_result.innerHTML += "< Q" + cnt + ". 순위 >" + "<br>";
+
+
+	for(var k=num_min; k<num_max; k++){
+		span_q_result.innerHTML += rank_num + "순위: " + q_result[k] + q_score[k] + "<br>";
+		rank_num++;
+
+	}
+
+	span_q_result.innerHTML += "<br>";
+	num_min = num_max;//4개씩 출력하기 위해서 
+	num_text = num_text + 4;// 질문이 바뀔때마다 바뀐 질문의 선택지로 변경하기 위해
+	cnt++;
+	
+
+
+}
+
+
+
+function change(q){//정렬하는곳
+	var temp = [[0,0],[0,0],[0,0],[0,0]];
+	
+	for(var i=0; i <q.length; i++){
+		max = i;
+		for(var j=i+1; j<q.length; j++){
+			if(q[j][0] >= q[max][0]){
+				max=j;}
+		}
+		temp[i] = q[i];
+		q[i] = q[max];
+		q[max] = temp[i];
+	
+	}
+	return q;
+	
+
+}
+
+function calc(q){//점수계산하는 함수
+	var score = [[0,"1"],[0,"2"],[0,"3"],[0,"4"]];
+
+	for(var i=0; i<q.length; i++){
+		if(q[i] == "1"){
+			score[0][0] += 1;}
+		else if(q[i] == "2"){
+			score[1][0] += 2;}
+		else if(q[i] == "3"){
+			score[2][0] += 3;}
+		else{
+			score[3][0] += 4;}
+	}
+	return score;
+
+}
+
+
+
+
+
+</script>
+</head>
+<body>
+<h3>춘천 홍보 설문조사</h3>
+<hr>
+
+<form name="q1">
+<span id="q_title">Q1. 거주한지 얼마나 됐습니까?</span></br>
+<input type="radio" name="one" value="1">1년이하</input><br>
+<input type="radio" name="one" value="2">1년~2년</input><br>
+<input type="radio" name="one" value="3">2년~5년</input><br>
+<input type="radio" name="one" value="4">5년 이상</input><br>
+</form>
+<br>
+
+
+<form name="q2">
+<span id="q_title">Q2. 현재 귀하의 직업은 무엇입니까?</span><br>
+<input type="radio" name="two" value="1">학생</input><br>
+<input type="radio" name="two" value="2">직장인</input><br>
+<input type="radio" name="two" value="3">CEO</input><br>
+<input type="radio" name="two" value="4">무직</input><br>
+</form>
+<br>
+
+
+<form name="q3">
+<span id="q_title">Q3. 춘천 홍보시 어떤 태마에 집중을 했으면 좋겠습니까?</span><br>
+<input type="radio" name="three" value="1">관광명소</input><br>
+<input type="radio" name="three" value="2">먹거리</input><br>
+<input type="radio" name="three" value="3">특산물</input><br>
+<input type="radio" name="three" value="4">문화,예출체험</input><br>
+</form>
+<br>
+
+
+<form name="q4">
+<span id="q_title">Q4. 자신이 생각하는 춘천의 좋은점은 무엇입니까?</span><br>
+<input type="radio" name="four" value="1">교통의 편리함</input><br>
+<input type="radio" name="four" value="2">자연친화(공기가 맑다)</input><br>
+<input type="radio" name="four" value="3">먹거리(먹을것이 많다)</input><br>
+<input type="radio" name="four" value="4">관광지(관광명소가 많다)</input><br>
+</form>
+<br>
+
+
+
+<form name="q5">
+<span id="q_title">Q5. 가장 많이 이용했던 관광지는 어디입니까?</span><br>
+<input type="radio" name="five" value="1">소양강</input><br>
+<input type="radio" name="five" value="2">하중도 생태공원</input><br>
+<input type="radio" name="five" value="3">풍물시장</input><br>
+<input type="radio" name="five" value="4">기타</input><br>
+</form>
+<br>
+
+
+
+<form name="q6">
+<span id="q_title">Q6. 귀하의 나이는 어떻게 되십니까?</span><br>
+<input type="radio" name="six" value="1">19세 미만</input><br>
+<input type="radio" name="six" value="2">19~39세</input><br>
+<input type="radio" name="six" value="3">40~59세</input><br>
+<input type="radio" name="six" value="4">60세 이상</input><br>
+</form>
+<br>
+
+
+<hr>
+
+<button onclick="main()">제출</button>
+<span id = "result"> </span>
+<button onclick="finish()"> All Finish </button><br>
+
+
+<fieldset><legend> 설문에 응답한 사람 수 </legend>
+설문에 응답한 인원수는 총 <span id="span_person"> </span> 입니다. <br> 
+</fieldset>
+<br>
+
+<fieldset><legend> 결과 출력창</legend>
+<span id="span_result"> <br> </span>
+</fieldset>
+
+
+
+
+</form>
+</body>
+</html>

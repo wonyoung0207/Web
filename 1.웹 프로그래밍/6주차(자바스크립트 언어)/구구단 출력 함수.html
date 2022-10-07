@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head><title>구구단 만들기</title>
+<script>
+function gugudan(num){
+	var m = parseInt(num);
+	if(isNaN(m) || m>9 || m<1){
+		alert("잘못입력하셨습니다.");
+		return;
+	}
+	for(var i=1; i<=9; i++){
+		document.write(m + " * " + i + "=" + m*i + "<br>");
+	}
+}
+</script>
+</head>
+<body>
+<h3>구구단 출력 함수 만들기</h3>
+<hr>
+<script>
+var num = prompt("구구단 몇 단을 원하세요?","");
+gugudan(num);
+</script>
+</body>
+</html>

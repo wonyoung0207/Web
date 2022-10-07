@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head><title> document.open과 close 이용 </title>
+<script>
+var win = null;
+
+function change(){
+	if(win == null || win.closed)
+		win = window.open("","outWin","width=300,height=200");
+	var a = document.getElementByid("srcText");
+	win.document.open();
+	win.document.write(a.value);
+	win.document.close();
+
+}
+</script>
+</head>
+<body>
+<h3> 새로운 창에 open과 close이용해 내용 띄우기 </h3>
+<hr>
+<p> 아래에 html문서를 작성하고 버튼을 클릭해보세요. 새 윈도우에 html문서 출려됩니다.</p>
+<textarea id="srcText" rows="10" cols="50"></textarea>
+
+<br>
+<br>
+<button onclick="change()">HTML문서 출력하기</button>
+</body>
+</html>

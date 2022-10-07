@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title> 실습6 </title>
+<script>
+function checkNotEmpty(elem,min,max){
+	var s = elem.value;
+	if(s.length >= min && s.length <= max){
+		alert("입력완료!");
+		return true;
+		
+	}
+	else{
+		alert(min + "문자와 " + max + "문자 사이로 입력해주세요!");
+		elem.focus();
+		return false;
+	}
+
+}
+
+
+</script>
+</head>
+<body>
+<form>
+	이름(6~8글자) : <input type="text" id='user'/>
+	<input type="button" onclick="checkNotEmpty(document.getElementById('user'),6,8)" value='확인'/>
+
+</form>
+</body>
+</html>

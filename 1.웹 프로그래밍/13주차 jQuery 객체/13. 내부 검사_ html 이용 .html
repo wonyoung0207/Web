@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+
+<script src="C:\Users\안원영\Desktop\Wy\2. 웹프로그래밍_김은주/jquery-3.5.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		//var html = $('h1').html();
+		//alert(html);
+
+		$('h1').html(function(i) {
+			var h = $('h1');
+			//alert($('h1')[i].textContent);
+			alert(h[i].textContent);
+		});
+		
+
+	});
+
+</script>
+</head>
+
+<body>
+
+<h3> 내부 검사_ html 이용</h3>
+<h3> 자바스크립트의 innerHTML과 같은 기능임 </h3>
+<hr>
+
+<h1> Header-0 </h1>
+<h1> Header-1 </h1>
+<h1> Header-2 </h1>
+
+</body>
+</html>

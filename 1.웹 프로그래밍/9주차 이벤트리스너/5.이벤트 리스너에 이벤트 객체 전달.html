@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head ><title>이벤트 리스너에 이벤트 객체 전달</title>
+</head>
+<body>
+<p id="p">마우스 올려보세요</p>
+<button onclick="f(event)">클릭하세요</button>
+
+<script>
+function f(e){
+	alert(e.type);
+}
+
+document.getElementById("p").onmouseover=f;
+</script>
+</body></html>
+

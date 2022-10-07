@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head><title>문제1번</title>
+<script>
+function result(row,key){
+	for(var i =0; i < row; i++){
+	document.write(key[0]);
+	}
+
+	for(var i =0; i < row-2; i++){
+		document.write("<br>");
+		document.write(key[1]);
+		document.write("&nbsp &nbsp &nbsp");
+		document.write(key[2]);
+	}
+
+	document.write("<br>");
+	for(var i =0; i < row; i++){
+		document.write(key[3]);
+	}
+}
+
+
+
+</script>
+</head>
+<body>
+<h3>기호로 표시된 border</h3>
+<hr>
+<script>
+var row = parseInt(prompt("출력할 행 수를 입력하세요","4"));
+
+
+var key = prompt("연속적으로 기호를 4개 입력하세요.","★♧○▣");
+result(row,key);
+
+
+
+</script>
+</body>
+</html>

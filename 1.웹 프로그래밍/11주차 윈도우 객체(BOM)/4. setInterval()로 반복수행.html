@@ -1,0 +1,33 @@
+<!doctype html>
+<html><head>
+<title> setInterval() 로 텍스트 회전 </title></head>
+<body>
+<h3> 텍스트가 자동 회전하며, 마우스로 클릭하면 중단합니다. </h3>
+<h4>intervale은 주기적으로 반복해주는 함수임<h4>
+
+<hr>
+<div> <span id = "span" style="background-color:yellow">
+	자동으로 회전하는 텍스트 입니다.</span>
+</div>
+
+<script>
+var span = document.getElementById("span");
+var timeId = setInterval("doRotate()",200); //200밀리초 주기로 dorotate호출
+
+span.onclick = function(e){
+	clearInterval(timeId);//클릭시 setInterval 중단
+}
+
+function doRotate(){
+	var str = span.innerHTML;
+	var firstChar = str.substr(0,1);//첫 글자를 가지는 변수
+	var remains = str.substr(1,str.length-1);//나머지 글자를 가지는 변수
+	str = remains + firstChar;
+	span.innerHTML = str;
+
+}
+
+
+</script>
+</body>
+</html>

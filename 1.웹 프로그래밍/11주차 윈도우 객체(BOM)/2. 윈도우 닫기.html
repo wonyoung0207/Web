@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head><title> 윈도우 닫기 </title>
+<script>
+var newWin = null;//새로 연 윈도우를 기억하는 변수
+
+function load(URL){
+	newWin = window.open(URL,"myWin","left=300,top=300,width=400,height=300");
+
+
+}
+
+function closeNewWindow(){
+	if(newWin == null || newWin.closed){//윈도우 열리지 않았거나 닫힌경우 실행
+		return;
+	}
+	else{
+		//myWin.close();//이거 안됨
+		newWin.close(); 
+	}
+}
+
+</script>
+</head>
+<body>
+<h3> window의 close()로 윈도우 닫기 </h3>
+<hr>
+<a href="javascript:load('http://www.hallym.ac.kr')">
+	한림대학교 웹 페이지</a><br>
+<a href="javascript:window.close()">
+	현재 윈도우 닫기</a><br>
+<a href="javascript:closeNewWindow()">
+	새 윈도우 닫기 </a><br>
+
+
+
+</body>
+</html>

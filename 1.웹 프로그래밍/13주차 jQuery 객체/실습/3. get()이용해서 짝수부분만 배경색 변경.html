@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head><title> DOM 예제 </title>
+<script src="C:\Users\안원영\Desktop\Wy\2. 웹프로그래밍_김은주/jquery-3.5.1.min.js"></script>
+
+<style>
+
+
+</style>
+
+<script>
+	$(document).ready(function(){
+		var h1 = $('h1');
+		for(var i=0; i < h1.length; i++){
+			if( i%2 != 0){//인덱스가 짝수가 아니면 -> 1,3인덱스에서 동작
+				var de = h1.get(i);//get() : 선택한 문서 객체 중 하나 선택
+
+				$(de).css('backgroundColor','red');
+				//de.css('backgroundColor','red');
+			}
+		}
+
+		//$('h1:even').css('backgroundColor','red');//인덱스 0,2 만 빨간색
+		//$('h1:odd').css('backgroundColor','red');//인덱스 1,3만 빨간색
+		
+	});
+
+</script>
+</head>
+
+<body>
+<h3> 짝수부분만 배경색이 변경됩니다.</h3>
+<hr>
+
+<h1> HeaderA </h1> 
+<h1> HeaderB </h1> 
+<h1> HeaderC </h1> 
+<h1> HeaderD </h1> 
+
+
+</body>
+</html>

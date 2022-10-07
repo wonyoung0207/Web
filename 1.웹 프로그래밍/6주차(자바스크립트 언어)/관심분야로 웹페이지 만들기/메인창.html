@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head><title>리스트로 메뉴 만들기</title>
+<style>
+table{
+border-collapse : collapse;
+}
+
+tr#머리{
+text-align : center;
+font-size:30px;
+padding : 5px;
+height : 15px;
+width : 110px;
+background : olive;
+font-family : "Papyrus";
+}
+
+td{
+text-align : center;
+font-size:20px;
+padding : 5px;
+height : 15px;
+width : 110px;
+}
+
+
+thead,tfoot{
+background : darkgray;
+color : yellow;
+}
+
+tbody tr:nth-child(even){
+background : aliceblue;
+}
+
+
+
+tbody td:hover{
+background : pink;
+border-radius:40px;
+}
+
+#이미지{
+width:300px;
+height:250px;
+border-radius: 70px;
+}
+
+
+</style>
+</head>
+<body>
+<h2> 나의 관심사 </h2>
+<hr>
+
+
+<table>
+
+<tbody>
+	<tr id="머리"><th>My Resting Place</th><th>My Cook Class</th><th>iot 설문지</th></tr>
+	<tr>
+	<td><img id="이미지" src="아메리카노.jpg"></td>
+	<td><img id="이미지" src="스테이크.jpg"></td>
+	<td><img id="이미지" src="iot사물인터넷.jpg"></td>
+	</tr>
+	<tr>
+	<td><a href="카페.html" target="_blank">나만의 휴식처로 이동!!</a></td>
+	<td><a href="요리리스트.html" target="_blank">요리 교실로 이동!!</a></td>
+	<td><a href="iot.html" target="_blank">iot설문지로 이동!!</a></td>
+	</tr>
+</tbody>
+
+</body>
+</html>

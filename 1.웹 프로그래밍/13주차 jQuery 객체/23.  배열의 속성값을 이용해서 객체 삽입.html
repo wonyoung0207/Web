@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<script src="C:\Users\안원영\Desktop\Wy\2. 웹프로그래밍_김은주/jquery-3.5.1.min.js"></script>
+<script>
+	$(document).ready(function (){
+		var content = [
+			{name:'홍길동',region:'서울시 광진구'},
+			{name:'이단아',region:'경기도 남양주'},
+			{name:'박두길',region:'강원도 춘천'}
+		];
+		$('div').append(function (index){
+			var item = content[index];
+			var output = '';
+
+			output += '<h1>' + item.name + '</h1>';
+			output += '<h2>' + item.region + '</h2>';
+
+			return output;
+		});
+	});
+</script>
+</head>
+
+<body>
+<h3> 배열의 속성값을 이용해서 객체 삽입  </h3>
+<hr>
+
+<div> </div>
+<div> </div>
+<div> </div>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head><title> select이용해서 객체 이미지 출력 </title>
+<script>
+function drawImage(){
+	var sel = document.getElementById("select_img");
+	var img = document.getElementById("img_space");
+	img.src = sel.options[sel.selectedIndex].value;
+}
+
+
+</script>
+</head>
+
+<body onload="drawImage()">
+<h3> 사진 이름을 선택하면 이미지가 출력됩니다. </h3>
+<form>
+<select id="select_img" onchange="drawImage()">
+	<option value = "강아지1.jpg"> 강아지1
+	<option value = "강아지2.jpg" selected> 강아지2
+	<option value = "노을.jpg"> 노을
+</select>
+<img id ="img_space" src="강아지2.jpg" alt="">
+</form>
+
+</body>
+</html>

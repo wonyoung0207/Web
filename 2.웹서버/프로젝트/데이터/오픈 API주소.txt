@@ -1,0 +1,6 @@
+https://nl.go.kr/NL/search/openApi/saseoApi.do?key=da37d369eb8c3047f55b17eddc77094d12ee1535f30712678b25b2bf8143935d
+&startRowNumApi=1
+&endRowNumApi=10
+&start_date=20210101
+&nd_date=20210131
+&drCode=4

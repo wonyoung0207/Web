@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title> 실습7 </title>
+<script>
+function checkNotEmpty(elem){
+	var exp = /^[0-9]+$/;//정규 표현식-> /(이걸로 시작후 끝남), ^(시작알림), [](사용할정보), +(반복사용가능하게함), $(정규식 끝맞친다.
+
+	if(elem.value.match(exp)){//정규표현식 메소드
+		return true;
+	}
+	else{
+		alert("숫자만 입력하세요");
+		elem.value="";
+		elem.focus();
+		return false;
+	}
+
+	
+
+}
+
+
+</script>
+</head>
+<body>
+<h3> 정규표현식을 이용해서 원하는 값 외의 값이 입력되면 다시 포커스 </h3>
+<hr>
+<form>
+	전화번호(-없이 숫자만입력) : <input type="text" id='phone'/>
+	<input type="button" onclick="checkNotEmpty(document.getElementById('phone'))" value='확인'/>
+
+</form>
+</body>
+</html>

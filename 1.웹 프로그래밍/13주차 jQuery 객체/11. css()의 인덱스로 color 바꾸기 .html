@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+
+<script src="C:\Users\안원영\Desktop\Wy\2. 웹프로그래밍_김은주/jquery-3.5.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		var color = ['red','blue','orange'];
+		
+		$('h1').css('color',function(index){
+				return color[index];
+		});
+	});
+
+</script>
+</head>
+
+<body>
+
+<h3> css()의 인덱스로 color 바꾸기 </h3>
+<h3>  </h3>
+<hr>
+
+<h1> Header-0 </h1>
+<h1> Header-1 </h1>
+<h1> Header-2 </h1>
+
+</body>
+</html>

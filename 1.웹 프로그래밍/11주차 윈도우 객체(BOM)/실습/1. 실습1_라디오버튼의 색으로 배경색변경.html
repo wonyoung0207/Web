@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<title> 실습1 </title>
+<script>
+function changeColor(color){
+	var body = document.getElementById("target");
+	body.style.backgroundColor = color;
+}
+
+</script>
+</head>
+<body id = "target">
+<form method="POST">
+	<input type="radio" name="C1" value="v1" onclick="changeColor('lightblue')">파란색
+	<input type="radio" name="C1" value="v2" onclick="changeColor('lightgreen')">초록색
+</form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<style>
+
+</style>
+
+<script src="C:\Users\안원영\Desktop\Wy\2. 웹프로그래밍_김은주/jquery-3.5.1.min.js"></script>
+<script>
+
+$(document).ready(function(){
+	$('textarea').keyup(function() {// key가 입력되고 나서 호출
+		var inputlength = $(this).val().length;
+		var remain = 150-inputlength;
+
+		$('h1').html(remain);
+		
+	});
+});
+
+</script>
+
+</head>
+<body>
+<h3> keyup() 메소드이용해서 val()로 남은 문자열 길이 출력하기 </h3>
+150 글자에서 입력된만큼 빼서 문자열 길이 출력 
+<hr>
+
+<div>
+	<p> 지금 내 생각을 </p>
+	<h1> 150글자 이내로 작성하세요 </h1>
+	<textarea cols='70' rows='5'> </textarea>
+</div>
+</body>
+</html>

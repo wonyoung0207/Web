@@ -1,0 +1,111 @@
+<!DOCTYPE html><html><head><title>함수 실습</title></head>
+<body><script>
+
+function e(a){
+	
+	for(var i = 0; i < 5; i++){
+		for(var j = 0; j < 5; j++){
+			document.write(arr[i]);
+
+		}
+		document.write("<br>");
+	}
+}
+
+var arr = new Array();
+for(var i = 0; i < 5; i++){
+	arr[i] = prompt("기호를 입력하세요 : ");
+}
+e(arr)
+
+
+</script></body></html>
+============================================================
+<!DOCTYPE html><html><head><title>함수 실습</title></head>
+<body><script>
+
+function e(num){
+	for(var i = 0; i < num.length; i++){
+		for(var j = 0; j < num.length; j++){
+			document.write(num[i]);
+
+		}
+		document.write("<br>");
+	}
+}
+
+var arr = new Array();
+var num = prompt("영문대문자를 입력하세요 : ");
+
+e(num);
+
+
+</script></body></html>
+==========================================================
+<!DOCTYPE html><html><head><title>함수 실습</title></head>
+<body><script>
+
+function e(arr){
+	for(var i = 0; i < arr.length; i++){
+		document.write(arr[i]);
+		document.write("<br>");
+	}
+}
+
+var arr = ["♣■★□","◐♧▣♣","＊☆＠※","○◆▲●"];
+e(arr);
+
+</script></body></html>
+=======================================================
+<!DOCTYPE html><html><head><title>함수 실습</title></head>
+<body><script>
+
+function e(num){
+	for(var i = 0; i <5;i++){
+		document.write(num);
+	}
+	document.write("<br>");
+
+	for(var j = 1; j <= 3; j++){
+		document.write(num);
+		for(var k = 1; k<=3;k++){
+			document.write("&nbsp&nbsp&nbsp");//자바스크립트는 블랭크 하나만
+						//인식하기때문에 이&nbsp라는 특수문자 입력
+		}
+		document.write(num + "<br>");
+	}
+
+	for(var a = 0; a <5;a++){
+		document.write(num);
+	}
+	document.write(''<br>");
+	
+}
+
+var num = prompt("특수문자를 입력하세요 : ");
+
+e(num);
+
+
+
+</script></body></html>
+================================================
+<!DOCTYPE html><html><head><title>함수 실습</title></head>
+<body><script>
+
+function e(num){
+	for(var i = 0; i < 5; i++){
+		for(var j = 0; j < 5-i; j++){
+			document.write(num[0]);
+		}
+		for(var k = 0; k < i;k++){
+			document.write(num[1]);
+		}
+	document.write("<br>");
+	}
+}
+
+var num = prompt("2개의 특수문자를 입력하세요.");
+e(num);
+
+</script></body></html>

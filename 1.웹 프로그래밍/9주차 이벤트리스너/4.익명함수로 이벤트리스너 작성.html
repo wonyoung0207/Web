@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head ><title>익명함수 이벤트 리스너 이용</title>
+<script>
+var p;
+function init(){
+	p=document.getElementById("p");
+	p.onmouseover = function(){
+		this.style.backgroundColor="orchid";
+	};
+	p.addEventListener("mouseout",
+		function(){this.style.backgroundColor="white";}
+	);
+}
+</script>
+</head>
+<body onload="init()">
+<p>익명함수 이벤트 리스너 이용</p>
+<hr>
+<p id="p">마우스 올리면 배경색 바뀜</p>
+</body></html>

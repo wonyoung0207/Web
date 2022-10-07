@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head><title> DOM 예제 </title>
+<script src="C:\Users\안원영\Desktop\Wy\2. 웹프로그래밍_김은주/jquery-3.5.1.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+		$('p').css('backgroundColor','orange');
+		$('p').css('height','30');
+		$('p').css('width',function(i) {//i = index의 의미임
+			alert(i);
+			var value = 50;
+			i++;
+			value = value + 30*i;//인덱스 증가할때마다 길이 늘어남
+			return value;
+		});	
+	});
+
+</script>
+</head>
+
+<body>
+<h3> 인덱스별로 배경길이를 다르게 지정합니다.</h3>
+<hr>
+
+<p class="a"> HTML5 </p>
+<p class="a"> CSS3 </p>
+<p class="a"> 자바스크립트 </p>
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<title> 문제1 </title>
+<style>
+img{
+	width:200px;
+	height:150px;
+}
+</style>
+
+<script src="C:\Users\안원영\Desktop\Wy\2. 웹프로그래밍_김은주/jquery-3.5.1.min.js"></script>
+
+
+<script>
+	$(document).ready(function(){
+		$('#b1').click(function(){
+			$('#p1').html(function(){
+				var a = "이제부터는 자바스크립트를 공부합니다.";
+				var image = "<img src='강아지1.jpg'>";
+				var b = "즐겁게 열심히 합시다!";
+				return a + '<hr>' + image + '<hr>' + b;
+			});
+		});
+	});
+
+</script>
+</head>
+<body>
+<h2> Web Programming! </h2>
+<p id="p1"> 지금까지 html과 css를 공부했습니다. </p>
+<button id="b1"> Next </button>
+
+</body>
+</html>

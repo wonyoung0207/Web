@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head><title>실습2</title>
+<script>
+
+function calc(num1,num2,s){
+	var temp=0;
+	var result = 0;
+	if(num1 < num2){//나눗셈의 결과가 달라지기 때문에 
+		temp = num1;
+		num1 = num2;
+		num2 = temp;
+	}
+
+	switch (s){
+		case "+":
+			result = (num1 + num2);
+			break;
+		case "-":
+			result = (num1 - num2);
+			break;
+		case "*":
+			result = (num1 * num2);
+			break;
+		case "/":
+			result = (num1 / num2);
+			break;
+		case "%":
+			result = (num1 % num2);
+			break;
+		defalt:
+			result = "잘못입력";
+			break;
+
+	}
+	document.write(num1+s+num2+"의 결과값은 : "+result);
+	document.write("<br>");
+}
+
+</script>
+</head>
+<body>
+<script>
+
+calc(20,5,"+");
+
+calc(7,10,"-");
+
+calc(3,15,"*");
+
+calc(4,10,"/");
+
+calc(4,10,"%");
+
+</script>
+
+
+</body>
+</html>
+

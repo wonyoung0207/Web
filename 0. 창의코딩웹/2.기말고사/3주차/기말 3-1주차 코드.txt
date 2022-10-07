@@ -1,0 +1,155 @@
+<!DOCTYPE html><html><head><title>함수 실습</title></head>
+<body><script>
+
+function e(x){
+	f = (x*x) + x + 3;
+	return f;
+
+
+}
+var f,x;
+
+x = parseInt(prompt("x값을 입력하세요:"));
+document.write("f("+x+")의 결과는 : "+e(x)+"  입니다.");
+
+
+</script></body></html>
+===============================================
+<!DOCTYPE html><html><head><title>함수 실습</title></head>
+<body><script>
+
+var exp;
+exp = prompt("계산할 식을 입력하세요  : ");
+
+document.write("입력된 수식은 : " + exp);
+
+exp =eval(exp);
+document.write("<br> 계산된 결과는 : " + exp);
+
+
+</script></body></html>
+======================================================
+
+<!DOCTYPE html><html><head><title>함수 실습</title></head>
+<body><script>
+
+var exp = prompt("숫자나 문자 혹은 기호를 입력하세요 : ");
+document.write("입력된 문자는 : ");
+
+if( isNaN(exp))	//숫자가 아니니니?
+	document.write(" [ "+exp+" ] 로 숫자형식이 아닙니다. <br>");
+else
+	document.wrtie("숫자형식인 [ " + exp + " ] 입니다. <br>");
+
+
+</script></body></html>
+=====================================================
+<!DOCTYPE html><html><head><title>함수 실습</title></head>
+<body><script>
+
+var exp = prompt("숫자나 문자 혹은 기호를 입력하세요 : ");
+document.write("입력된 문자는 : ");
+
+if( !isFinite(exp)) // 숫자니? 에다가 "!" 써서 앞에 예제랑 결과 똑같이 나오게
+	document.write(" [ "+exp+" ] 로 숫자형식이 아닙니다. <br>");
+else
+	document.wrtie("숫자형식인 [ " + exp + " ] 입니다. <br>");
+
+
+</script></body></html>
+
+======================================================
+
+<!DOCTYPE html><html><head><title>구구단</title></head>
+<body><script>
+
+function e(num){
+	var a;
+	
+	for(var i = 0; i < 10;i++){
+		a = (i * num);
+		document.write(i + "*" + num + " = " + a);
+	}
+}
+
+var num;
+document.write("여기");
+num = parseInt(prompt("원하는 단 을 입력하세요 : "));
+
+e(num);
+
+
+</script></body></html>
+
+====================================================
+
+<!DOCTYPE html><html><head><title>구구단</title></head>
+<body><script>
+
+function e(num){
+	var a;
+
+	if(isNaN(num) || m < 1 || m > 9) // or연산자
+		alert("잘못입력하셨습니다. 정수를 입력해주세요");
+		return;	//나를 호출한쪽으로 다시가라
+	else
+
+		for(var i = 1; i < 10;i++){
+			a = (i * num);
+			document.write(i + " * " + num + " = " + a+"<br>");
+		
+		}
+}
+
+var num = parseInt(prompt("원하는 단 을 입력하세요 : "));
+
+e(num);
+
+</script></body></html>
+
+=========================================================
+
+<!DOCTYPE html><html><head><title>상자찍기</title></head>
+<body><script>
+
+function e(num){
+	
+	for(var i = 1; i <= num; i++){
+		for(var j = 0; j < i; j++){
+			document.write("■ ");
+
+		}
+		document.write("<br>");
+	}
+}
+
+var num = parseInt(prompt("반복할 횟수를 입력하세요 : "));
+e(num);
+
+
+</script></body></html>
+
+==========================================================
+
+<!DOCTYPE html><html><head><title>상자찍기</title></head>
+<body><script>
+
+function e(num){
+	
+	for(var i = 1; i <= num; i++){
+		a = num - i;
+		for(var j = 0; j < a; j++){
+			document.write("□ ");
+		}
+		for(var k = 0; k < i; k++){
+			document.write("■ ");
+		}
+		document.write("<br>");
+	}
+}
+
+var num = parseInt(prompt("반복할 횟수를 입력하세요 : "));
+e(num);
+
+
+</script></body></html>

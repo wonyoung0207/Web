@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head><title>position : absolute 절대배치</title>
+<style>
+div{
+display:inline-block;
+position : absolute;
+border : 1px solid lightgray;
+}
+
+div > p{
+display:inline-block;
+position: absolute;
+height: 50px;
+width: 15px;
+background: lightgray;
+}
+
+
+</style></head>
+<body>
+<h3>그림 위치에 절대배치 하기 </h3>
+<hr>
+<p>절대배치 : 지정한 위치에 원하는 텍스트 지정하기</p>
+
+<div>
+	<img src="노을.jpg" width="200" height="200" alt="노을">
+	<p style="left:50px; top:30px">하나</p>
+	<p style="left:100px; top:0px">둘</p>
+	<p style="left:100px; top:80px">셋</p>
+	<p style="left:150px; top:110px">넷</p>
+	<p style="left:30px; top:130px">다섯</p>
+</div>
+
+</body>
+</html>

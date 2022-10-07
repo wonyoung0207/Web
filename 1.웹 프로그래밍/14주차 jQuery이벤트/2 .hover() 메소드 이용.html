@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<style>
+.reverse{
+	background : black;
+	color : white;
+}
+</style>
+
+
+<script src="C:\Users\안원영\Desktop\Wy\2. 웹프로그래밍_김은주/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('h1').hover(function() {
+		$(this).addClass('reverse');
+	}, function(){
+		$(this).removeClass('reverse');
+	});
+});
+
+</script>
+
+</head>
+<body>
+<h3> hover() 메소드 => 마우스over 되면 동작 </h3>
+해당 h1에 moseover 하면 reverse 클래스가 추가되어 스타일이 적용됩니다.
+<hr>
+
+<h1> Header0 </h1>
+<h1> Header1 </h1>
+<h1> Header2 </h1>
+
+</body>
+</html>

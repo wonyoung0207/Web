@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head><title>표 스타일링 하기</title>
+<style>
+table{/*이중 테두리 제거*/
+border-collapse : collapse;
+}
+
+th,td{/*모든 셀의 크기를 조정*/
+text-align : center;
+padding : 5px;
+height : 15px;
+width : 80px;
+}
+
+thead, tfoot{
+background : darkgray;
+color : yellow;
+}
+
+tbody tr:nth-child(even){/*짝수 tr에만 적용*/
+background : aliceblue;
+}
+
+tbody tr:hover{
+background : pink;
+}
+
+
+</style>
+<body>
+<h3>2017년 1학기 성적</h3>
+<hr>
+<table>
+	<thead>
+		<tr><th>이름</th><th>점수1</th><th>점수2</th></tr>
+	</thead>
+	<tfoot>
+		<tr><th>합</th><th>180</th><th>160</th></tr>
+	</tfoot>
+	<tbody>
+		<tr><td>홍길동</td><td>90</td><td>80</td></tr>
+		<tr><td>이명제</td><td>60</td><td>40</td></tr>
+		<tr><td>이기훈</td><td>30</td><td>20</td></tr>
+	</tdody>
+</table>
+</body>
+</html>

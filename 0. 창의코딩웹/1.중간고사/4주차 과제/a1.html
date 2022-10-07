@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html><head><title>학점</title></head>
+<body>
+<script>
+
+var a;
+var b;
+
+a = prompt("학점을 입력하세요","0000");
+a = parseInt(a);
+
+	if(a >= 90 && a <= 100)
+		b = "A";
+	else if(a >=80 && a <= 89)
+		b = "B";
+	else if(a >= 70 && a <=79)
+		b = "C";
+	else if(a >= 60 && a <=69)
+		b = "D";
+	else
+		b = "F";
+	document.write("학점은[" + b + "]입니다.");
+
+</script></body></html>

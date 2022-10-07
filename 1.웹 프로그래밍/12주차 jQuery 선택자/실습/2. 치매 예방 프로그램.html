@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head><title> 치매 예방 프로그램</title>
+<style>
+th{
+	text-align:left;
+	width:100px;	
+}
+
+</style>
+<script>
+var ex = ['30','22','46','28'];//정답있는 배열 
+
+
+function calc(){
+	var result = document.getElementById("result");
+	var text = new Array();
+	var input = new Array();
+	
+	var th_one = document.getElementById("th_one");
+	var th_two = document.getElementById("th_two");
+	var th_three = document.getElementById("th_three");
+	var th_four = document.getElementById("th_four");
+
+	text.push(th_one);
+	text.push(th_two);
+	text.push(th_three);
+	text.push(th_four);
+
+
+
+	var t1_one = document.getElementById("1");
+	var t2_two = document.getElementById("2");
+	var t3_three = document.getElementById("3");
+	var t4_four = document.getElementById("4");
+
+	input.push(t1_one);
+	input.push(t2_two);
+	input.push(t3_three);
+	input.push(t4_four);
+
+	var score=0;//점수 누적되는 변수
+
+	for(var i=0; i<input.length; i++){//점수 누적
+		if(ex[i] == input[i].value){
+			score += 10;
+		}else{//틀리면 밑줄긋기
+			text[i].style.textDecoration="line-through";
+		}
+
+	}
+
+	alert("총 점:"+score);
+	if(score == 40){
+		result.innerHTML = score + "점 : 합격하셨습니다.";
+	}
+	else{
+		result.innerHTML = score + "점";
+	}
+
+}
+
+</script>
+</head>
+<body>
+<h3> 치매 예방 프로그램 </h3>
+<hr>
+
+<table>
+	<tr><th id="th_one">5*6 </th><td> <input type="text" id="1"></td></tr>
+	<tr><th id="th_two">7+5*3 </th><td> <input type="text" id="2"></td></tr>
+	<tr><th id="th_three">23*2 </th><td> <input type="text" id="3"></td></tr>
+	<tr><th id="th_four">35-7 </th><td> <input type="text" id="4"></td></tr>
+	<tr><th> <button onclick="calc()">채점</button> </th><td><span id="result">0점</span></td></tr>
+</table>
+
+</body>
+</html>

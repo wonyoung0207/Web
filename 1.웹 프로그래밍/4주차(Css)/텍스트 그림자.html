@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head><title>텍스트 그림자</title>
+<style>
+p {
+color: yellow;
+font-size: 30px;
+font-style : italic;
+font-weight : 900;
+text-align: center;
+text-shadow:3px 3px 5px black,
+10px 10px 25px green,
+0 0 5px red;
+}
+
+div#one{
+width:150px;
+height: 200px;
+background-size: 150px 200px;
+background-repeat: no-repeat;
+background-image: url("노을.jpg");
+margin: 10px;
+
+}
+
+div#two{
+width:150px;
+height: 200px;
+background-size: 150px 200px;
+background-repeat: no-repeat;
+background-image: url("숲.jpg");
+margin: 10px;
+
+}
+
+div#three{
+width:150px;
+height: 200px;
+background-size: 150px 200px;
+background-repeat: no-repeat;
+background-image: url("비.jpg");
+margin: 10px;
+
+}
+
+div{
+margin-left : 120px;
+margin-right : 120px;
+}
+
+
+div:hover{
+box-shadow : 0px 0px 10px blue,
+0px 0px 25px 0px green,
+0px 0px 5px 0px red;
+}
+
+</style>
+</head>
+<body>
+<p>
+My Choice Web
+</p>
+<hr>
+
+<div id="one">
+</div>
+
+<div id="two">
+</div>
+
+<div id="three">
+</div>
+
+</body>
+</html>

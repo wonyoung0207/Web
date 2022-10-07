@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head><title> 레코드 갯수만큼 테이블 행 출력 </title>
+</head>
+<body>
+<script>
+var arr = ["홍길동",100,90,"이만두",78,60,"최달자",85,100,"김향자",85,100,"박달문",50,89];
+//"김향자",85,100,"박달문",50,89
+var sum = 0;
+var avg = 0;
+
+document.write("레코드 수 : " + arr.length/3);
+document.write("<table border=1><tr><th>성명</th><th>중간성적</th><th>기말성적</th><th>총합</th><th>평균</th><th>학점</th></tr>");
+
+for(var i =0; i <arr.length; i=i+3){
+	sum = arr[i+1] + arr[i+2];
+	avg = sum / 2;
+	hac = avg/10;
+
+	switch(parseInt(hac)){
+		case 10:
+			grade = "A";
+			break;
+		case 9:
+			grade = "A";
+			break;
+		case 8:
+			grade = "B";
+			break;
+		case 7:
+			grade = "C";
+			break;
+		case 6:
+			grade = "D";
+			break;
+		default:
+			grade = "F";
+			break;
+	}
+
+	document.write("<tr><td>"+arr[i]+"</td><td>"+arr[i+1]+"</td><td>"+arr[i+2]+"</td><td>"+sum+"</td><td>"+avg.toFixed(2)+"</td><td>"+grade+"</td></tr>");
+
+}
+document.write("</table>");
+
+
+
+</script>
+</body>
+</html>

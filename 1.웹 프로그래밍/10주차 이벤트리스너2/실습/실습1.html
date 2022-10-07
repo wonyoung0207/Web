@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head><title> 실습 </title>
+<script>
+
+function ComputeScore(){
+
+	var arr = new Array();
+	var answer = ["PHP","파워포인트"];
+	var stu_sc = document.stuinfo.sc.value;
+	var stu_name = document.stuinfo.sname.value;
+	var result = document.getElementById("result");
+	var score = 0;
+	
+	arr[0] = document.forms[1].a.value;
+	arr[1] = document.forms[2].b.value;
+
+	for(var i=0; i<arr.length; i++){
+		if(arr[i] == answer[i]){
+			score= score + 10;
+		}
+	}
+	result.innerHTML = stu_sc + ": " + stu_name + ": " + score + " 점";
+
+
+}
+
+function reset(){
+	var reset = document.forms[3].w.value;
+	reset.value=false;
+	
+}
+
+</script>
+<body>
+
+
+<form name = "stuinfo">
+학과 : <input type="text" name="sc"> &nbsp &nbsp &nbsp 
+이름 : <input type="text" name="sname">
+</form>
+
+<hr>
+<form name = "r1">
+Q1. HTML5 프로그래밍에서 다루는 내용이 아닌 것은?<br>
+<input type="radio" name="a" value="HTML">HTML<br>
+<input type="radio" name="a" value="CSSS3">CSS3<br>
+<input type="radio" name="a" value="JavaScript">JavaScript<br>
+<input type="radio" name="a" value="PHP">PHP<br>
+<p>
+</form>
+
+
+<form name="r2">
+Q2. 다음 중 그 성격이 다른 프로그램은?<br>
+<input type="radio" name="b" value="사파리">사파리<br>
+<input type="radio" name="b" value="파워포인트">파워포인트<br>
+<input type="radio" name="b" value="파이어폭스">파이어폭스<br>
+<input type="radio" name="b" value="크롬">크롬<br>
+</form>
+
+<hr>
+
+<button onclick="ComputeScore()"> 채점(20점 만점) </button>
+<span id= "result"> </span>
+
+<form>
+<input type="radio" name="w">취소되는곳
+<input type="reset" onclick="reset()">
+</form>
+
+</body>
+</html>

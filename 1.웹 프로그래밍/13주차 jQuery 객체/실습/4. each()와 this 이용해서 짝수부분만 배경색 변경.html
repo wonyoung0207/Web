@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head><title> DOM 예제 </title>
+<script src="C:\Users\안원영\Desktop\Wy\2. 웹프로그래밍_김은주/jquery-3.5.1.min.js"></script>
+
+<style>
+
+
+</style>
+
+<script>
+	$(document).ready(function(){
+		$('h1').each(function(index, element){
+			if( index % 2 != 0){
+				$(this).css('backgroundColor','red');
+			}
+		});
+	});
+
+</script>
+</head>
+
+<body>
+<h3> each() 와 this 이용해서 짝수부분만 배경색 변경</h3>
+<h3> each()는 반복문임 </h3>
+
+<hr>
+
+<h1> HeaderA </h1> 
+<h1> HeaderB </h1> 
+<h1> HeaderC </h1> 
+<h1> HeaderD </h1> 
+
+
+</body>
+</html>

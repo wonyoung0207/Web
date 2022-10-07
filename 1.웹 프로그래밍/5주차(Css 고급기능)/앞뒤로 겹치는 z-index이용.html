@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head><title>z-index프로퍼티 이용</title>
+<style>
+div{
+position : absolute;
+}
+
+img{
+position : absolute;
+}
+
+#one{
+z-index: -3; left: 10px; top:20px;
+}
+
+#two{
+z-index: -2; left: 40px; top:30px;
+}
+
+#three{
+z-index: 3; left: 80px; top:40px;
+}
+
+#for{
+z-index: 7; left: 120px; top:50px;
+}
+
+
+
+</style></head>
+<body>
+<h3>z-index 프로퍼티 이용 -> 앞뒤로 움직이는 효과</h3>
+<hr>
+<div>
+<img id="one" src="노을.jpg" width="100" height="140" alt="노을">
+<img id="two" src="숲.jpg" width="100" height="140" alt="숲">
+<img id="three" src="비.jpg" width="100" height="140" alt="비">
+<img id="for" src="강아지1.jpg" width="100" height="140" alt="강아지1">
+</div>
+
+</body>
+</html>

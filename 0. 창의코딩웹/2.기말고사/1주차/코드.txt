@@ -1,0 +1,108 @@
+<!DOCTYPE html><html><head><title>함수</title></head>
+<body><script>
+
+
+function eSum(){
+var sum,x,y;
+
+x = 10;
+y = 20;
+
+sum = x+y;
+
+document.write("합은 " + sum+"<br>");
+}
+
+eSum();
+eSum();
+eSum();
+eSum();
+eSum();
+
+
+
+</script></body></html>
+============================================================
+<!DOCTYPE html><html><head><title>함수</title></head>
+<body><script>
+
+
+function eSum(x,y){
+var sum
+
+sum = x+y;
+
+document.write("합은 " + sum + "<br>");
+}
+
+eSum(1,2);
+eSum(10,20);
+eSum(100,200);
+eSum(1000,2000);
+eSum(10,15);
+
+</script></body></html>
+===================================================================
+<!DOCTYPE html><html><head><title>함수</title></head>
+<body><script>
+
+
+function eSum(x,y){
+var sum
+
+sum = x+y;
+return sum;
+}
+
+document.write("합은 " + eSum(1,2) + "<br>");
+document.write("합은 " + eSum(10,20) + "<br>");
+document.write("합은 " + eSum(100,200) + "<br>");
+document.write("합은 " + eSum(1000,2000) + "<br>");
+document.write("합은 " + eSum(10,15) + "<br>");
+
+
+</script></body></html>
+===============================================================
+<!DOCTYPE html><html><head><title>함수</title></head>
+<body><script>
+
+var gcnt = 0;
+
+function eSum(x,y){
+var sum
+
+sum = x+y;
+
+document.write(gcnt++ + "합은 " + sum + "<br>");
+}
+
+eSum(1,2);
+eSum(10,20);
+eSum(100,200);
+</script></body></html>
+==============================================================
+<!DOCTYPE html><html><head><title>함수</title></head>
+<body><script>
+
+var gcnt = 0;
+
+function eSum(){
+	var x,y,sum;
+	
+	gcnt++;	
+
+	x = parseInt(prompt(gcnt +"번째 x 값을입력하세요."));
+	y = parseInt(prompt(gcnt +"번째 y 값을입력하세요."));
+
+	sum = x + y;
+
+	document.write("[" + gcnt + "]번쨰 합은 " + sum + "<br>");
+}
+eSum();
+eSum();
+eSum();
+
+
+</script></body></html>
+===========================================================
+

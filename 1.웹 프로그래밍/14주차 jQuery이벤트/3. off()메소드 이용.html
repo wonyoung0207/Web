@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+
+<script src="C:\Users\안원영\Desktop\Wy\2. 웹프로그래밍_김은주/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('h1').click(function() {
+		$(this).html('내용이 변경됨');
+		alert('click 이벤트 발생');//alert가 앞보다 먼저실행됨
+		$(this).off();//의미상으로 삭제는 됐지만 확인하지는 못함
+	});
+});
+
+</script>
+
+</head>
+<body>
+<h3> off() 메소드 => 이벤트 연결 해제 </h3>
+해당 h1 클릭시 내용을 변경하고 바로 이벤트 삭제함<br>
+의미상으로 삭제는 됬지만 확인하지는 못함
+<hr>
+
+<h1> Header0 </h1>
+<h1> Header1 </h1>
+<h1> Header2 </h1>
+
+</body>
+</html>

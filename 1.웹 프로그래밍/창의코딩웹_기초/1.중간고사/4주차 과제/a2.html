@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html><head><title>학점계산 switch</title></head>
+<body>
+<script>
+
+var a;
+var b;
+var m;
+
+
+a = prompt("학점을 입력하세요","0000");
+a = parseInt(a);
+
+document.write("a의 값 = " + a + "a/10의 값 = " + (a/10) + "<br>");
+m = parseInt(a/10);
+
+
+	switch(m){
+	
+	case 10:
+	case 9: b = "A"; break;
+	case 8: b = "B"; break;
+	case 7: b = "C"; break;
+	case 6: b = "D"; break;
+	default: b = "F"; break;
+
+	}
+
+	document.write("학점은[" + b + "]입니다.");
+
+</script></body></html>

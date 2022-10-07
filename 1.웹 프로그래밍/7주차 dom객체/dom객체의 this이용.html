@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head><title> dom객체의 this 이용</title>
+<script>
+function change(obj, size, color){
+	obj.style.color = color;
+	obj.style.fontSize = size;
+}
+</script>
+</head>
+<body>
+<h3> this 활용해서 스타일 바꾸기 </h3>
+<hr>
+
+<button onclick="change(this, '30px', 'red')">버튼1</button>
+<button onclick="change(this, '20px', 'green')">버튼2</button>
+<div onclick="change(this, '25px', 'orange')"> 여기 클릭하면 크기와 색상 변경</div>
+
+</body>
+</html>

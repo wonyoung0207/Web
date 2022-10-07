@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head ><title>DoM객체의 addEventListener이용</title>
+<script>
+var p;
+function init(){
+	p=document.getElementById("p");
+	p.addEventListener("mouseover",over);
+	p.addEventListener("mouseout",out)
+}
+function over(){
+	p.style.backgroundColor="orchid";
+}
+function out(){
+	p.style.backgroundColor="white";
+}
+</script>
+</head>
+<body onload="init()">
+<p>DoM객체의 addEventListener이용</p>
+<hr>
+<p id="p">마우스 올리면 배경색 바뀜</p>
+</body></html>

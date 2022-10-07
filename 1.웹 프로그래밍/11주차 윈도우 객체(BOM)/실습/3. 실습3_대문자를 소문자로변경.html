@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<title> 실습3 </title>
+<script>
+function sub(){
+	var x = document.getElementById("name");
+	x.value = x.value.toLowerCase();
+
+}
+
+function sub2(){
+	var x = document.getElementById("name2");
+	x.value = x.value.toLowerCase();
+
+}
+
+</script>
+</head>
+<body id="target">
+<form>
+	영어단어 : <input type="text" id="name" onchange="sub()">
+	영어단어 : <input type="text" id="name2" onblur="sub2()">
+</form>
+<hr>
+입력필드를 벗어나면 소문자로 변경됩니다.
+
+</body>
+</html>

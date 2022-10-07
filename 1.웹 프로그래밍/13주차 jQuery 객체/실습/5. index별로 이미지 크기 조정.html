@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head><title> DOM 예제 </title>
+<script src="C:\Users\안원영\Desktop\Wy\2. 웹프로그래밍_김은주/jquery-3.5.1.min.js"></script>
+
+<style>
+
+
+</style>
+
+<script>
+	$(document).ready(function(){
+		$('img').each(function(index, element){
+			$(this).attr('src','강아지1.jpg');
+			$(this).css('width',(index+1)*100);
+		});
+	});
+
+</script>
+</head>
+
+<body>
+<h3> index별로 이미지 크기 조정 </h3>
+<h3> http://placehold.it 이용해서 이미지 가져오기 </h3>
+
+<hr>
+
+<img>
+<img>
+<img>
+
+
+</body>
+</html>

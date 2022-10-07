@@ -1,0 +1,100 @@
+<!DOCTYPE html><html><head><title>함수 2</title>
+<body><script>
+var i;
+var arr = [10,20,30];
+
+for(i = 0;i < arr.length; i++){	##인덱스(위치) 로 접근하는 방법
+	document.write(i+"번째값"+arr[i]+ "<br>");
+}
+
+
+</script></body></html>
+=====================================================
+<!DOCTYPE html><html><head><title>함수 2</title>
+<body><script>
+var i;
+
+function eprint(arr){ ->여기있는 arr는 매개변수로 밑에  eprint arr 와 다른 값이다.
+	for(i = 0;i < arr.length; i++){
+		document.write(i+"번째값"+arr[i]+ "<br>");
+	}
+}
+
+var arr = [10,20,30];
+eprint(arr);
+
+</script></body></html>
+===============================================
+<!DOCTYPE html><html><head><title>함수 2</title>
+<body><script>
+var i;
+
+function eprint(arr,name){ 
+	for(i = 0;i < arr.length; i++){
+		document.write(arr[i]+" : "+name[i]+ "<br>");
+	}
+}
+
+var arr = [10,20,30];
+var name = new Array("서울","경기","강원");
+eprint(arr,name);
+
+</script></body></html>
+======================================================
+<!DOCTYPE html><html><head><title>함수 2</title>
+<body><script>
+var i;
+
+function eprint(arr){ 
+	var s;
+	for(i = 0;i < arr.length; i++){
+		s = arr[i]*arr[i] + arr[i] + 4; -> 자바스크립트는 제곱승(x**2) 못씀,따라서 3승넘어가면
+					반복문 사용하기
+		document.write(arr[i]+" 의 계산 결과는 [ "+ s + "]입니다." + "<br>");
+	}
+}
+
+var arr = [2,5,7,10,3];
+eprint(arr);
+
+</script></body></html>
+===================================================================
+<!DOCTYPE html><html><head><title>함수 2</title>
+<body><script>
+var i;
+
+function eprint(arr){ 
+	var s;
+
+	for(i = 0;i < arr.length; i = i+2){
+		document.write(arr[i]+" : "+ arr[i+1] + "<br>");
+	}
+}
+
+var arr = ["홍길동",20,"박길자",23,"최순달",32];
+eprint(arr);
+
+</script></body></html>
+==============================================
+<!DOCTYPE html><html><head><title>함수 2</title></head>
+<body><script>
+
+
+
+function eprint(arr){
+	
+	var s=0;
+	var arg=0;
+
+	for(var i = 0;i<arr.length;i=i+3){
+'		s = (arr[i+1] + arr[i+2]);
+		arg = (s/2);
+		document.write(arr[i] + " : " + arr[i+1] + "," + arr[i+2] + " 의 합은 [ " + (arr[i+1] + arr[i+2]) + ", 평균은 [ " + ((arr[i+1] + arr[i+2])/2) + " ] 입니다." + "<br>");
+	}
+}
+
+var arr = ["홍길동",20,30,"박길자",23,50,"최순달",32,100];
+
+eprint(arr);
+
+</script></body></html>

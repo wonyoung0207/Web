@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<style>
+
+</style>
+
+<script src="C:\Users\안원영\Desktop\Wy\2. 웹프로그래밍_김은주/jquery-3.5.1.min.js"></script>
+<script>
+
+$(document).ready(function(){
+	$('h1').click(function() {
+		$(this).html(function(index,html){
+			return html + '★';
+		});
+	});
+	setInterval(function() {
+		$('h1').last().trigger('click');//강제로 클릭이벤트를 발생시킴
+	},1000);
+});
+
+</script>
+
+</head>
+<body>
+<h3> trigger() 메소드 => 이벤트 강제 발생 </h3>
+이벤트를 강제적으로 발생시킴 => 별로 안좋다. 
+<hr>
+
+<h1> Start1: </h1>
+<h1> Start2: </h1>
+
+</body>
+</html>

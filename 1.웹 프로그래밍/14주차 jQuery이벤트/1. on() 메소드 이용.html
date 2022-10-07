@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<script src="C:\Users\안원영\Desktop\Wy\2. 웹프로그래밍_김은주/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('h1').on('click',function(){
+		$(this).html(function(index,html){
+			return html + '+';
+		});
+	});
+});
+
+</script>
+
+</head>
+<body>
+<h3> on() 메소드 => 이벤트를 이벤트 리스너로 적용되게 함 </h3>
+해당 h1을 클릭할때마다 + 기호가 추가 됩니다.
+<hr>
+
+<h1> Header0 </h1>
+<h1> Header1 </h1>
+<h1> Header2 </h1>
+
+</body>
+</html>
