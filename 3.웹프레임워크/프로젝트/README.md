@@ -76,3 +76,9 @@
 | **<img src="images/db2.png"> <br />그룹 정보 테이블** |
 | **<img src="images/db3.png"><br />면접관 테이블**     |
 | **<img src="images/db4.png"><br />학과 테이블**       |
+
+---
+
+## 시연영상
+
+<img src="./images/시연영상.gif">
