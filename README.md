@@ -19,6 +19,7 @@
 ## 웹 프레임워크 
 
 - [면접을 통한 청탁 확률 계산 ](https://github.com/wonyoung0207/Web/tree/master/3.%EC%9B%B9%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8)
+- [NCP를 이용한 클래식 영화관 티켓팅 서비스 ](https://github.com/wonyoung0207/TIL/tree/master/MultiCampus/Project_TicketSaJo)
 
 
 
